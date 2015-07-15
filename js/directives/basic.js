@@ -1,9 +1,14 @@
 angular.module('angularPlay.directives')
-	.directive('alert',
+	.directive('basic',
 		function() {
 			return {
 				//Define if the directive should be available as element(E)/attribute(A)/class(C)/comment(M) etc
 				restrict: 'EA',
-				templateUrl: '/templates/alert.html'
+				templateUrl: '/templates/basic.html',
+				//setting up a scope to take a value from 
+				scope: {
+					//binding to a string value
+					value: '@'
+				}
 			};
 		});
