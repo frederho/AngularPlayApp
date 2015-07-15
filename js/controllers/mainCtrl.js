@@ -2,8 +2,6 @@ angular.module('angularPlay.controllers')
 	.controller('mainCtrl', [function() {
 		var vm = this;
 		
-		vm.repeatNumber = 0;
-
 		vm.entries = [
 			{
 				title: "Item1",
@@ -18,9 +16,4 @@ angular.module('angularPlay.controllers')
 				value: 3
 			}
 		];
-
-		vm.update = function(stuff) {
-
-			return "fish";
-		};
 	}]);
