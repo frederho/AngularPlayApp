@@ -1,19 +1,21 @@
 angular.module('angularPlay.controllers')
 	.controller('mainCtrl', [function() {
 		var vm = this;
+		
+		vm.repeatNumber = 0;
 
 		vm.entries = [
 			{
-				title: "Hei",
+				title: "Item1",
 				value: 1
 			},
 			{
-				title: "Hei",
-				value: 1
+				title: "Item2",
+				value: 2
 			},
 			{
-				title: "Hei",
-				value: 1
+				title: "Item3",
+				value: 3
 			}
 		];
 
