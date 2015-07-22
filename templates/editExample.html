@@ -1,0 +1,31 @@
+<div style="border:dotted; border-color: black; padding: 1em 1em 1em 1em; ">
+<!--
+Pass the model to the directive for direct manipulation of
+the model
+-->
+<span>Model contains: <i>{{ngModel}}</i> </span>
+<form name="form1" novalidate class="simple-form">
+	
+	<pre><b>Direct</b> Pass model to local scope to edit.</pre>
+
+	<textarea type="text" ng-model="ngModel" style="height: 10em;"></textarea>
+	<br/>
+</form>
+<hr/>
+
+<!-- 	
+If we want to work on a copy, we can pass the text as a copy and then call the update function
+with the replacement text 
+-->
+
+<form name="form2" novalidate class="simple-form" >
+	<pre><b>Indirect</b> Pass text and update function to local scope to edit.</pre>
+
+	<textarea type="text" ng-model="value" style="height: 10em;"></textarea>
+	<br/>
+	<pre>Update function passed from main scope</pre>
+	<input type="button" value="Click to run update" ng-click="update({argument_name: value})" /> 
+																	<!-- we need to know the name of the variable as defined in markup -->
+</form>
+
+</div>
