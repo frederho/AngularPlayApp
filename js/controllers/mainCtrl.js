@@ -16,4 +16,16 @@ angular.module('angularPlay.controllers')
 				value: 3
 			}
 		];
+
+		vm.text = "This is the description that we can edit";
+
+
+		vm.consoleText = function() {
+			console.log(vm.text);
+		}
+
+		vm.updateModel = function(text) {
+			vm.text = text;
+		}
 	}]);
+
