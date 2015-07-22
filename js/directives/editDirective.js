@@ -10,15 +10,14 @@ angular.module('angularPlay.directives')
 				// if we use ngModel, we can manipulate the parent scopes model
 				require: 'ngModel',
 				templateUrl: '/templates/editExample.html',
-				// two way binding
 				scope: {
-					ngModel: "=",
-					update: "&",
+					ngModel: "=", // two way binding
+					update: "&", // function
 					value: "@text" //naming attributes for tag
 				},
 				link: function(scope, element, attr, ngModel) {
-	                console.log(scope, element, attr);
-	                console.log(ngModel);
+	                //console.log(scope, element, attr);
+	                //console.log(ngModel);
 				}
 			};
 		});
