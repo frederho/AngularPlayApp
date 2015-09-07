@@ -28,8 +28,6 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 
-
-
 # Thumbnails
 ._*
 
@@ -43,16 +41,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-#Ignore karma items
-.idea/
-node_modules/
-tmp/
-lib/adapter.js
-
-#Ignore bower components folder
-bower_components
-
-
-*.log

@@ -14,6 +14,10 @@ angular.module('angularPlay.directives')
 					ngModel: "=", // two way binding
 					update: "&", // function
 					value: "@text" //naming attributes for tag
+				},
+				link: function(scope, element, attr, ngModel) {
+	                //console.log(scope, element, attr);
+	                //console.log(ngModel);
 				}
 			};
 		});
