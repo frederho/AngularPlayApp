@@ -1,5 +1,5 @@
 angular.module('angularPlay.controllers')
-	.controller('mainCtrl', [function() {
+	.controller('MainCtrl', [function() {
 		var vm = this;
 		
 		vm.entries = [

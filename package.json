@@ -22,7 +22,12 @@
   "devDependencies": {
     "angular": "^1.4.5",
     "angular-mocks": "^1.4.5",
+    "angular-ui-router": "^0.2.15",
+    "browser-sync": "^2.9.3",
+    "karma": "^0.13.9",
     "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18",
     "ui-router": "0.0.1"
   }
 }
