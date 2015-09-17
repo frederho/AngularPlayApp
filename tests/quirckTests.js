@@ -71,6 +71,21 @@ describe('Javascript quircks', function() {
 		expect(theAnswer).toBeFalsy();
 	});
 
+	it('Javascript use function scope not blockscope', function() {
+		console.log('Javascript use function scope, not blockscope.  Declared variables are overwritten when in the same scope');
+		var name = 'Navn1';
+		if(name){
+			var name= 'navn2';
+			console.log(name);
+		}		
+		console.log(name);
 
-
+		console.log('A new scope is created within a function and functions can be used to keep variables out of the global scope');
+		//IIFE
+		(function(){
+			var name = 'navn3';
+			console.log(name);
+		})();
+		console.log(name);
+	});
 });
