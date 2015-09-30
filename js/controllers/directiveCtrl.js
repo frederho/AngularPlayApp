@@ -1,5 +1,5 @@
 angular.module('angularPlay.controllers')
-	.controller('MainCtrl', [function() {
+	.controller('DirectiveCtrl', [function() {
 		//Controller with ControllerAs and viewmodel pattern
 		var vm = this;
 

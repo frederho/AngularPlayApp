@@ -6,6 +6,12 @@ angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directive
 		$stateProvider
 			.state('directives', {
 				url: "/directives",
-				templateUrl: '../templates/directives.html',
-			})		
+				templateUrl: '../templates/directives.html'
+			})
+			.state('controllerAs', {
+				url: "/controllerAs",
+				templateUrl: '../templates/controllerAs.html',
+				controller: 'ControllerAs',
+				controllerAs: 'controller'
+			});		
 	}]);

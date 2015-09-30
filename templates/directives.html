@@ -13,10 +13,10 @@
 		<!-- a basic directive taking a parameter "value" and printing the string input, change the value of the "value" attribute and see what happens -->
 		<basic value="Look at me"></basic>
 		
-		
-		<div ng-controller="MainCtrl as main">
-			<!-- Directive setting up an ng-repeat based on a list from the main-controller scope-->
+		<!-- Controllers can be added in the view like this-->
+		<div ng-controller="DirectiveCtrl as directive">
+			<!-- Directive setting up an ng-repeat based on a list from the directive-controller scope-->
 			<repeat-directive></repeat-directive>
 			<!-- ng-model takes object, text the literal string and update is a function -->
-			<sps-edit ng-model="main.text" text="{{main.text}}" update="main.updateModel(argument_name)"></sps-edit>
+			<sps-edit ng-model="directive.text" text="{{directive.text}}" update="directive.updateModel(argument_name)"></sps-edit>
 		</div>
