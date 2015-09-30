@@ -1,0 +1,22 @@
+<!-- Simple version of a directive console logging using a link function -->
+		<log-directive></log-directive>
+		
+
+
+		<!-- Template injecting html in place of the directive -->
+		<hello-world></hello-world>
+		<!-- The same directiv can also be included like this: -->
+		<div hello-world></div>
+		<!-- or like this -->
+		<div class="hello-world"></div>
+		
+		<!-- a basic directive taking a parameter "value" and printing the string input, change the value of the "value" attribute and see what happens -->
+		<basic value="Look at me"></basic>
+		
+		
+		<div ng-controller="MainCtrl as main">
+			<!-- Directive setting up an ng-repeat based on a list from the main-controller scope-->
+			<repeat-directive></repeat-directive>
+			<!-- ng-model takes object, text the literal string and update is a function -->
+			<sps-edit ng-model="main.text" text="{{main.text}}" update="main.updateModel(argument_name)"></sps-edit>
+		</div>
