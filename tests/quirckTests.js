@@ -14,7 +14,7 @@ describe('Javascript quircks', function() {
 			var1 = 1;
 		}
 		ExplicitNameDeclaration();
-
+		console.log("===================================================================================")
 	});
 
 	it('function declarations are hoisted to the top of the scope', function () {
@@ -25,6 +25,19 @@ describe('Javascript quircks', function() {
 
 		};
 	});
+
+	it('Recommended bindable member declaration format', function () {
+	console.log('hello is set to bar, and bar function is hoisted, so hello is a callable function', bar);
+
+		var hallo = bar;
+		expect(hallo).toEqual(bar);
+
+
+		function bar() {
+		};
+		console.log("===================================================================================")
+
+	});
 	it('functions declared as variables are treated as variables', function () {
 		console.log('functions declared as variables are not hoisted', foo);
 		expect(foo).not.toBeDefined(); 
@@ -32,6 +45,8 @@ describe('Javascript quircks', function() {
 		var foo = function () {
 
 		};
+		console.log("===================================================================================")
+
 	});
 
 	it('== does type conversion to compare variables', function () {
@@ -49,6 +64,8 @@ describe('Javascript quircks', function() {
 		console.log(number+" (number)" + " == " + string+" (string)" + " is " + typeCheck(number, string));
 		console.log('undefined == null is ' + typeCheck(undefined, null));
 		expect(typeCheck(number,string)).toBeTruthy();
+		console.log("===================================================================================")
+
 	});
 
 
@@ -69,6 +86,8 @@ describe('Javascript quircks', function() {
 		console.log(number+" (number)" + " === " + string+" (string)" + " is " + theAnswer);
 		console.log('undefined === null is ', typeCheck(undefined, null));
 		expect(theAnswer).toBeFalsy();
+		console.log("===================================================================================")
+
 	});
 
 	it('Javascript use function scope not blockscope', function() {
@@ -87,5 +106,7 @@ describe('Javascript quircks', function() {
 			console.log(name);
 		})();
 		console.log(name);
+		console.log("===================================================================================")
+		
 	});
 });
