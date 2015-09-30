@@ -1,1 +1,10 @@
-Stuff coming.....
+<h3>With controllerAs syntax, we work with a view model rather than scope</h3>
+<pre>
+	angular.module('angularPlay.controllers')
+ 		.controller('ControllerAs', [function(){
+			var vm = this;
+			
+			vm.value = "Some text";
+		}]);
+</pre>
+<p>We can get values from the controller by accessing the controller alias, in this case <b>controller</b>. controller.value contains "{{controller.value}}" </p>
