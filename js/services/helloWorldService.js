@@ -3,7 +3,8 @@ angular.module('angularPlay.services')
 		[function(){
 			
 			var initialValue = "Hi there"
-			resetValue();
+			//gather all initial logic in a function to make it easy to access
+			activate();
 			//Expose the callable members( interface of the service) at the top
 			var service = {
 				//using "" prevent conflicts with reserved key words
@@ -33,4 +34,7 @@ angular.module('angularPlay.services')
 				alertValue = value;
 			};
 
+			function activate(){
+				resetValue();
+			};
 	}]);

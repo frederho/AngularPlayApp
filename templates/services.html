@@ -2,21 +2,34 @@
 
 
 
-<pre>angular.module('angularPlay.services')
+<pre>
+angular.module('angularPlay.services')
 	.factory('HelloWorldService', 
 		[function(){
 			
 			var initialValue = "Hi there"
-			resetValue();
-			
+			//gather all initial logic in a function to make it easy to access
+			activate();
+			//Expose the callable members( interface of the service) at the top
 			var service = {
-				"sayHello": sayHello,
-				"set": updateValue,
+				//using "" prevent conflicts with reserved key words
 				"get": getValue,
-				"reset": resetValue
+				"reset": resetValue,
+				"sayHello": sayHello,
+				"set": updateValue
 			};
 
+			//Returning a service object allows us to be explicit about what should be available outside the service 
 			return service;
+
+			//Using function declaratin will make sure that the function is hoisted so it is available in the entire scope. Order does not matter
+			function getValue() {
+				return alertValue;
+			};
+
+			function resetValue() {
+				alertValue = initialValue;
+			}
 
 			function sayHello() {
 				alert(alertValue);
@@ -26,18 +39,21 @@
 				alertValue = value;
 			};
 
-			function getValue() {
-				return alertValue;
+			function activate(){
+				resetValue();
 			};
-
-			function resetValue() {
-				alertValue = initialValue;
-			}
 	}]);
 </pre>
-<pre>{{service | json}}</pre>
+<p>
+	controller scope
+	<pre>{{service | json}}</pre>
+</p>
+
+<p>
 <input type="text" ng-model="service.ctrlValue"> <br>
-<input type="text" ng-model="service.inputValue"> <br>
-<button ng-click="service.updateServiceValue()">Update value</button>
+<p>Services are singletons and therefore persistent between controllers and refresh <br></p>
+<input type="text" ng-model="service.inputValue"><br>
+</p>
+<button ng-click="service.updateServiceValue()">Update value in service</button>
 <button ng-click="service.sayHello()">Alert value</button>
 <button ng-click="service.resetValue()">Reset value</button>

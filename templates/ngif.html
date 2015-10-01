@@ -1,0 +1,20 @@
+<button ng-click="ngif.show = !ngif.show">Switch value</button>
+
+
+<div ng-if="ngif.show">
+	<h3>
+		ng-if=true
+	</h3> 	
+	ng-if will show if true, and be removed from the DOM if false
+
+</div>
+<pre>{{ ngif | json }}</pre>
+
+
+<div ng-show="ngif.show">
+	<h3>
+		ng-show=true
+	</h3>
+	ng-show will show the element if true, and add a class(ng-hide) if false
+	All bindings will still exist in scope and take up resources
+</div>

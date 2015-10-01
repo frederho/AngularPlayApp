@@ -7,7 +7,6 @@ angular.module('angularPlay.controllers')
 			vm.breakStuff = breakStuff;
 
 			function breakStuff(){
-				console.log("Throw an error");
-				throw new ReferenceError("this is fucked up");
+				throw new ReferenceError("AUUUUUUU");
 			};
 	}]);

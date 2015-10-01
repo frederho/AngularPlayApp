@@ -26,5 +26,12 @@ angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directive
 				controller: 'ServiceCtrl',
 				controllerAs: 'service',
 				cache: false
+			})
+			.state('ngif', {
+				url: "/ngif",
+				templateUrl: '../templates/ngif.html',
+				controller: 'NgifCtrl',
+				controllerAs: 'ngif'
 			});
+
 	}]);
