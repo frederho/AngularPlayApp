@@ -1,0 +1,43 @@
+<h3>Here you can see the revealing pattern in use for a service</h3>
+
+
+
+<pre>angular.module('angularPlay.services')
+	.factory('HelloWorldService', 
+		[function(){
+			
+			var initialValue = "Hi there"
+			resetValue();
+			
+			var service = {
+				"sayHello": sayHello,
+				"set": updateValue,
+				"get": getValue,
+				"reset": resetValue
+			};
+
+			return service;
+
+			function sayHello() {
+				alert(alertValue);
+			};
+
+			function updateValue(value) {
+				alertValue = value;
+			};
+
+			function getValue() {
+				return alertValue;
+			};
+
+			function resetValue() {
+				alertValue = initialValue;
+			}
+	}]);
+</pre>
+<pre>{{service | json}}</pre>
+<input type="text" ng-model="service.ctrlValue"> <br>
+<input type="text" ng-model="service.inputValue"> <br>
+<button ng-click="service.updateServiceValue()">Update value</button>
+<button ng-click="service.sayHello()">Alert value</button>
+<button ng-click="service.resetValue()">Reset value</button>

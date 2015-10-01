@@ -1,6 +1,6 @@
 //Angular app is defined here, the dependencies needed are listed in the []. 
 //Make sure to reference to this module without the [].
-angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directives', 'ui.router'])
+angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directives', 'ui.router', 'angularPlay.services'])
 	.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('directives');
 		$stateProvider
@@ -12,12 +12,19 @@ angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directive
 				url: "/controllerAs",
 				templateUrl: '../templates/controllerAs.html',
 				controller: 'ControllerAs',
-				controllerAs: 'controller'
+				controllerAs: 'controller',
+				cache: false
 			})
 			.state('usingScope', {
 				url: "/usingScope",
 				templateUrl: '../templates/usingScope.html',
 				controller: 'UsingScope'
+			})
+			.state('services', {
+				url: "/services",
+				templateUrl: '../templates/services.html',
+				controller: 'ServiceCtrl',
+				controllerAs: 'service',
+				cache: false
 			});
-
 	}]);

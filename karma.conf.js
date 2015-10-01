@@ -18,6 +18,8 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'js/*.js',
+      //Remember to load dependencies before the js that need said dependencies
+      'js/services/*.js',
       'js/**/*.js',
       'tests/*.js'
     ],
