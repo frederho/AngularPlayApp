@@ -1,4 +1,5 @@
-<h3>With controllerAs syntax, we work with a view model rather than scope</h3>
+<h3>ControlllerAs as controller</h3>
+<h4>With controllerAs syntax, we work with a view model rather than scope</h3>
 <pre>
 	angular.module('angularPlay.controllers')
  		.controller('ControllerAs', [function(){
@@ -7,4 +8,14 @@
 			vm.value = "Some text";
 		}]);
 </pre>
-<p>We can get values from the controller by accessing the controller alias, in this case <b>controller</b>. controller.value contains "{{controller.value}}" </p>
+<pre>{{controller | json}}</pre>
+<p>ng-model="controller.value": <input type="text" ng-model="controller.value"></p>
+<p>We can get values from the controller by accessing the controller alias, in this case <i>controller</i>. { {controller.value } } = <b>{{controller.value}}</b> </p>
+
+<div ng-controller="NestedCtrl as nested" style="border:dotted;">
+<h3>ng-controller="NestedCtrl as nested"</h3>
+	<pre>{{nested | json}}</pre>
+	<p>We can easily access parent controllers by alias</p>
+	<p>ng-model="controller.value": <input type="text" ng-model="controller.value"></p>
+	<p>{ { nested.value } } = "{{nested.value}}" is not defined</p>
+</div>

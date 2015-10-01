@@ -17,7 +17,7 @@ angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directive
 			.state('usingScope', {
 				url: "/usingScope",
 				templateUrl: '../templates/usingScope.html',
-				controller: 'usingScope'
+				controller: 'UsingScope'
 			});
 
 	}]);
