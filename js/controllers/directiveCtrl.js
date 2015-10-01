@@ -3,10 +3,6 @@ angular.module('angularPlay.controllers')
 		//Controller with ControllerAs and viewmodel pattern
 		var vm = this;
 
-		//by setting bindable members to named functions, we make sure that they are available at the top of the controller scope
-		vm.consoleText = consoleText;
-		vm.updateModel = updateModel;
-
 		vm.entries = [
 			{
 				title: "Item1",
@@ -23,13 +19,5 @@ angular.module('angularPlay.controllers')
 		];
 
 		vm.text = "This is the description that we can edit";
-		//by named functions are always hoisted to the top of the scope
-		function consoleText() {
-			console.log(vm.text);
-		}
-
-		function updateModel(text) {
-			vm.text = text;
-		}
 	}]);
 

@@ -11,19 +11,28 @@
 	</head>
 
 	<body ng-app="angularPlay">
+		<div ng-controller="TopCtrl as top">
+			{{top.errorList}}
+			<button ng-click="top.breakStuff()">Break stuff</button>
+		</div>
 		<button ui-sref="directives">Directives</button>
 		<button ui-sref="controllerAs">ControllerAs syntax</button>
 		<button ui-sref="usingScope">Using scope</button>
 		<button ui-sref="services">services</button>
 		
+
+
 		<div ui-view></div>
 
 		<script src="node_modules/angular/angular.min.js"></script>
 		<script src="node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/configuration/exceptionHandler.js"></script>
 		<script src="js/services/01-services.js"></script>
+		<script src="js/services/errorService.js"></script>
 		<script src="js/services/helloWorldService.js"></script>
 		<script src="js/controllers/01-controllers.js"></script>
+		<script src="js/controllers/topCtrl.js"></script>
 		<script src="js/controllers/controllerAs.js"></script>
 		<script src="js/controllers/directiveCtrl.js"></script>
 		<script src="js/controllers/usingScope.js"></script>
