@@ -2,7 +2,7 @@ angular.module('angularPlay.controllers')
 	.controller('DirectiveCtrl', [function() {
 		//Controller with ControllerAs and viewmodel pattern
 		var vm = this;
-
+		vm.updateModel = updateModel;
 		vm.entries = [
 			{
 				title: "Item1",
@@ -19,5 +19,9 @@ angular.module('angularPlay.controllers')
 		];
 
 		vm.text = "This is the description that we can edit";
+
+		function updateModel(text) {
+			vm.text = text;
+		}
 	}]);
 
