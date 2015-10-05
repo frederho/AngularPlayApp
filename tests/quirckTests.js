@@ -4,15 +4,14 @@ describe('Javascript quircks', function() {
 		function HoistedNameDeclaration() {
 			console.log("var1 name is declared, but the value is not yet set", var1);
 			var var1 = 1;
-		}
-
+		};
 		HoistedNameDeclaration();
 
 		function ExplicitNameDeclaration() {
 			var var1;
 			console.log("this function is treated exactly like the the function above", var1);
 			var1 = 1;
-		}
+		};
 		ExplicitNameDeclaration();
 		console.log("===================================================================================")
 	});
@@ -54,15 +53,14 @@ describe('Javascript quircks', function() {
 		var string = '3';
 
 		var typeCheck = function (var1, var2) {
-			if(number == string){
-				return true;
-			}	
-			return false;
-		}
+			return number == string ? true : false;
+		};
 
 		console.log('comparison with "==" does type conversion to compare ')
 		console.log(number+" (number)" + " == " + string+" (string)" + " is " + typeCheck(number, string));
 		console.log('undefined == null is ' + typeCheck(undefined, null));
+		console.log('-1 == false is ' + typeCheck(-1, false));
+		console.log('NaN == undefined is ' + typeCheck(Number.NaN, undefined));
 		expect(typeCheck(number,string)).toBeTruthy();
 		console.log("===================================================================================")
 
@@ -75,18 +73,16 @@ describe('Javascript quircks', function() {
 		var number = 3;
 		var string = '3';
 
-		var typeCheck = function (var1, var2) {
-			if(var1 === var2){
-				return true;
-			}	
-			return false;
-		}
-		var theAnswer = typeCheck(number, string);
+		var strictComparison = function (var1, var2) {
+			return (var1 === var2) ? true: false;
+		};
+		var theAnswer = strictComparison(number, string);
 		console.log('strict comparison with "===" does not do type conversion');
 		console.log(number+" (number)" + " === " + string+" (string)" + " is " + theAnswer);
-		console.log('undefined === null is ', typeCheck(undefined, null));
+		console.log('undefined === null is ', strictComparison(undefined, null));
 		expect(theAnswer).toBeFalsy();
 		console.log("===================================================================================")
+
 
 	});
 

@@ -2,7 +2,7 @@
 //Make sure to reference to this module without the [].
 angular.module('angularPlay', ['angularPlay.controllers', 'angularPlay.directives', 'ui.router', 'angularPlay.services'])
 	.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise('directives');
+		$urlRouterProvider.otherwise('usingScope');
 		$stateProvider
 			.state('directives', {
 				url: "/directives",

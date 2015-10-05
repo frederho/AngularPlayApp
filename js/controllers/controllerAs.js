@@ -3,5 +3,4 @@ angular.module('angularPlay.controllers')
 		var vm = this;
 
 		vm.value = "Some text";
-
-}]);
+	}]);
