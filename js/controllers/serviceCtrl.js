@@ -1,4 +1,4 @@
-angular.module('angularPlay.services')
+angular.module('angularPlay.controllers')
 	.controller('ServiceCtrl', 
 		['HelloWorldService', 
 		function(HelloWorldService){
