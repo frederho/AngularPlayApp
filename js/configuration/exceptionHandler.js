@@ -1,4 +1,5 @@
 angular.module('angularPlay')
+.config(['$provide', function ($provide) {
     $provide.decorator('$exceptionHandler',
                 function () {
                     return function (exception, cause) {
